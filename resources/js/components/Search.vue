@@ -11,8 +11,8 @@
             class="text-sm h-full px-2 py-1 border border-slate-300 rounded-l border-r-0 focus:outline-teal-600 placeholder:text-sm placeholder:font-light"
         >
         <button type="submit" class="transition-colors bg-white h-full px-2 flex justify-center items-center rounded-r border border-slate-300 border-l-0 hover:bg-teal-100">
-            <span v-if="isSearching" class="text-xs text-teal-500">Searching...</span>
-            <SearchIcon v-else class="h-5 w-5 stroke-2 stroke-teal-600" />
+            <div v-if="isSearching" class="rounded-full border border-2 border-slate-300 border-t-teal-500 h-5 w-5 animate-spin"></div>
+            <SearchIcon v-else class="h-6 w-5 stroke-2 stroke-teal-600" />
         </button>
     </form>
 </template>

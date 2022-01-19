@@ -13,17 +13,23 @@
             tooltip="Delete"
             @click.prevent="deleteProduct(product.id)"
             class="
-                rounded-full p-2 hover:bg-rose-100 transition-colors relative
-                before:content-[attr(tooltip)] before:absolute before:right-8 before:-translate-y-full before:bg-slate-100 before:border
-                before:rounded-lg before:rounded-br-none before:px-2 before:py-1 before:bg-rose-500/90 before:text-white before:border-white
-                before:hidden hover:before:block
+                rounded-full p-2 hover:bg-rose-100 transition-colors relative active:bg-rose-200
+                before:content-[attr(tooltip)] before:absolute before:right-8 before:-translate-y-full before:border
+                before:rounded-full before:rounded-br-none before:px-3 before:py-1 before:bg-rose-100 before:text-rose-600 before:border-white
+                before:drop-shadow before:border-2 before:font-semibold before:hidden hover:before:block
             "
         >
             <TrashIcon class="h-5 w-5 stroke-rose-600"/>
         </button>
         <button
+            tooltip="Edit"
             @click.prevent="editProduct"
-            class="rounded-full p-2 hover:bg-teal-100 transition-colors"
+            class="rounded-full p-2 hover:bg-teal-100 transition-colors relative active:bg-teal-200
+                before:content-[attr(tooltip)] before:absolute before:right-8 before:-translate-y-full before:border
+                before:rounded-full before:rounded-br-none before:px-3 before:py-1 before:bg-teal-200 before:text-teal-700 before:border-white
+                before:drop-shadow before:border-2 before:font-semibold before:hidden hover:before:inline-block
+
+            "
         >
             <PencilIcon class="h-5 w-5 stroke-teal-600"/>
         </button>

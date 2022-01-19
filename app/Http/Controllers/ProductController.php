@@ -74,7 +74,7 @@ class ProductController extends Controller
         $message = 'Product(s) found.';
 
         if($name == '@all') {
-            $products = Product::all();
+            return $this->index();
         } else {
             $results = Product::where('name','LIKE', "%$name%")->get();
             if(!empty($results)) {
@@ -102,11 +102,7 @@ class ProductController extends Controller
         $item->price = $request['price'];
         $item->save();
 
-        return response()->json([
-            'status' => 200,
-            'message' => 'Changes saved.',
-            'products' => Product::all()
-        ]);
+        return $this->index();
     }
 
     /**

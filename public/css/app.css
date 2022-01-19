@@ -494,6 +494,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-11 {
   height: 2.75rem;
 }
+.h-\[\] {
+  height: ;
+}
+.h-\[80vh\] {
+  height: 80vh;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-6 {
+  height: 1.5rem;
+}
 .w-screen {
   width: 100vw;
 }
@@ -506,6 +518,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-5 {
   width: 1.25rem;
 }
+.w-4 {
+  width: 1rem;
+}
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -514,6 +529,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .border-collapse {
   border-collapse: collapse;
+}
+.scale-90 {
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@-webkit-keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -557,6 +593,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-0 {
   border-width: 0px;
 }
+.border-2 {
+  border-width: 2px;
+}
+.border-4 {
+  border-width: 4px;
+}
 .border-r-0 {
   border-right-width: 0px;
 }
@@ -577,6 +619,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+.border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
 .border-x-teal-500 {
   --tw-border-opacity: 1;
   border-left-color: rgb(20 184 166 / var(--tw-border-opacity));
@@ -589,6 +635,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-r-teal-500 {
   --tw-border-opacity: 1;
   border-right-color: rgb(20 184 166 / var(--tw-border-opacity));
+}
+.border-t-teal-500 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(20 184 166 / var(--tw-border-opacity));
 }
 .bg-gray-900\/25 {
   background-color: rgb(17 24 39 / 0.25);
@@ -616,6 +666,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+.bg-slate-100\/50 {
+  background-color: rgb(241 245 249 / 0.5);
+}
+.bg-slate-100\/75 {
+  background-color: rgb(241 245 249 / 0.75);
 }
 .stroke-rose-600 {
   stroke: #e11d48;
@@ -708,6 +764,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .font-semibold {
   font-weight: 600;
 }
@@ -753,6 +813,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -883,6 +950,10 @@ body {
   content: var(--tw-content);
   border-radius: 0.5rem;
 }
+.before\:rounded-full::before {
+  content: var(--tw-content);
+  border-radius: 9999px;
+}
 .before\:rounded-br-none::before {
   content: var(--tw-content);
   border-bottom-right-radius: 0px;
@@ -890,6 +961,10 @@ body {
 .before\:border::before {
   content: var(--tw-content);
   border-width: 1px;
+}
+.before\:border-2::before {
+  content: var(--tw-content);
+  border-width: 2px;
 }
 .before\:border-white::before {
   content: var(--tw-content);
@@ -919,6 +994,30 @@ body {
   content: var(--tw-content);
   background-color: rgb(244 63 94 / 0.9);
 }
+.before\:bg-rose-100::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 228 230 / var(--tw-bg-opacity));
+}
+.before\:bg-teal-100::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 251 241 / var(--tw-bg-opacity));
+}
+.before\:bg-green-100::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+.before\:bg-teal-200\/75::before {
+  content: var(--tw-content);
+  background-color: rgb(153 246 228 / 0.75);
+}
+.before\:bg-teal-200::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 246 228 / var(--tw-bg-opacity));
+}
 .before\:p-2::before {
   content: var(--tw-content);
   padding: 0.5rem;
@@ -938,10 +1037,51 @@ body {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.before\:px-3::before {
+  content: var(--tw-content);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.before\:font-semibold::before {
+  content: var(--tw-content);
+  font-weight: 600;
+}
 .before\:text-white::before {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.before\:text-rose-600::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+}
+.before\:text-teal-600::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(13 148 136 / var(--tw-text-opacity));
+}
+.before\:text-teal-700::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(15 118 110 / var(--tw-text-opacity));
+}
+.before\:opacity-0::before {
+  content: var(--tw-content);
+  opacity: 0;
+}
+.before\:drop-shadow::before {
+  content: var(--tw-content);
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.before\:delay-\[2000ms\]::before {
+  content: var(--tw-content);
+  transition-delay: 2000ms;
+}
+.before\:delay-1000::before {
+  content: var(--tw-content);
+  transition-delay: 1000ms;
 }
 .before\:content-\[\'\*\'\]::before {
   --tw-content: '*';
@@ -1014,9 +1154,42 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
+.hover\:bg-slate-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+.hover\:bg-slate-200\/75:hover {
+  background-color: rgb(226 232 240 / 0.75);
+}
+.hover\:delay-150:hover {
+  transition-delay: 150ms;
+}
+.hover\:delay-500:hover {
+  transition-delay: 500ms;
+}
 .hover\:before\:block:hover::before {
   content: var(--tw-content);
   display: block;
+}
+.hover\:before\:inline-block:hover::before {
+  content: var(--tw-content);
+  display: inline-block;
+}
+.hover\:before\:opacity-100:hover::before {
+  content: var(--tw-content);
+  opacity: 1;
+}
+.hover\:before\:delay-500:hover::before {
+  content: var(--tw-content);
+  transition-delay: 500ms;
+}
+.hover\:before\:delay-\[2000\]:hover::before {
+  content: var(--tw-content);
+  transition-delay: 2000;
+}
+.hover\:before\:delay-\[2000ms\]:hover::before {
+  content: var(--tw-content);
+  transition-delay: 2000ms;
 }
 .focus\:border-teal-500:focus {
   --tw-border-opacity: 1;
@@ -1028,5 +1201,13 @@ body {
 .focus-visible\:border-teal-500:focus-visible {
   --tw-border-opacity: 1;
   border-color: rgb(20 184 166 / var(--tw-border-opacity));
+}
+.active\:bg-rose-200:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 205 211 / var(--tw-bg-opacity));
+}
+.active\:bg-teal-200:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 246 228 / var(--tw-bg-opacity));
 }
 

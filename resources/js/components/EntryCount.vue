@@ -1,6 +1,6 @@
 <template>
     <form class="h-8 flex items-center">
-        <label for="entry-count" class="block text-sm text-slate-500 font-semibold mr-2">No. of Entries</label>
+        <label for="entry-count" class="block text-sm text-slate-500 font-semibold mr-2">No. of Results</label>
         <select
             name="entry_count"
             id="entry-count"
@@ -69,7 +69,7 @@ export default {
         }
     },
     beforeMount() {
-
+        this.getLimit();
     }
 }
 </script>

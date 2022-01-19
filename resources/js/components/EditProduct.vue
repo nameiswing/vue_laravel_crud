@@ -60,7 +60,7 @@
                     if(res.data.status === 200) {
                         console.log(res.data.products);
                         this.$store.commit('setProducts', res.data.products);
-                        this.buttonProgress = res.data.message;
+                        this.buttonProgress = 'Saved';
                         this.product_name = '';
                         this.details = '',
                         this.price = '0.00';
