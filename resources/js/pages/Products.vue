@@ -8,7 +8,12 @@
                 Add Product
             </button>
         </div>
-        <div class="w-full px-4 py-2 bg-slate-100 border border-b-0 rounded-t-md border-slate-300 flex justify-between flex-sm-column">
+        <div
+            class="
+                w-full px-4 py-2 bg-slate-100 border border-b-0 rounded-t-md border-slate-300
+                flex justify-between flex-sm-column flex-wrap gap-3
+            "
+        >
             <Search />
             <div>
                 <EntryCount />

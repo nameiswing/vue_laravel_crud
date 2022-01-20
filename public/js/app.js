@@ -19588,11 +19588,11 @@ __webpack_require__.r(__webpack_exports__);
 
       //save entry limit in session
       try {
-        this.axios.post("api/set-limit/".concat(this.numOfEntries)).then(function (response) {
-          if (response.data.status == 200) {
-            console.log(response.data.message);
+        this.axios.post("api/set-limit/".concat(this.numOfEntries)).then(function (res) {
+          if (res.data.status == 200) {
+            console.log("Limit set to ".concat(_this.numOfEntries, " entries."));
 
-            _this.$store.commit('setProducts', response.data.products);
+            _this.$store.commit('setProducts', res.data.products);
           } else {
             console.warn('Can not set entry limit.');
           }
@@ -19605,9 +19605,9 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       try {
-        this.axios.get("api/get-limit").then(function (response) {
-          if (response.data.status == 200) {
-            _this2.$store.commit('setNumOfEntries', response.data.limit);
+        this.axios.get("api/get-limit").then(function (res) {
+          if (res.data.status == 200) {
+            _this2.$store.commit('setNumOfEntries', res.data.limit);
           } else {
             console.warn(res.data.message);
 
@@ -20439,7 +20439,7 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_4 = {
-  "class": "w-full px-4 py-2 bg-slate-100 border border-b-0 rounded-t-md border-slate-300 flex justify-between flex-sm-column"
+  "class": "w-full px-4 py-2 bg-slate-100 border border-b-0 rounded-t-md border-slate-300 flex justify-between flex-sm-column flex-wrap gap-3"
 };
 var _hoisted_5 = {
   "class": "table-auto w-full border-collapse rounded"

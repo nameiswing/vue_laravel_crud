@@ -31,10 +31,10 @@ export default {
     methods: {
         setLimit() { //save entry limit in session
             try {
-                this.axios.post(`api/set-limit/${this.numOfEntries}`).then( response => {
-                    if(response.data.status == 200) {
-                        console.log(response.data.message);
-                        this.$store.commit('setProducts', response.data.products);
+                this.axios.post(`api/set-limit/${this.numOfEntries}`).then( res => {
+                    if(res.data.status == 200) {
+                        console.log(`Limit set to ${this.numOfEntries} entries.`);
+                        this.$store.commit('setProducts', res.data.products);
                     } else {
                         console.warn('Can not set entry limit.');
                     }
@@ -46,9 +46,9 @@ export default {
         },
         getLimit() {
             try {
-                this.axios.get(`api/get-limit`).then( response => {
-                    if(response.data.status == 200) {
-                        this.$store.commit('setNumOfEntries', response.data.limit);
+                this.axios.get(`api/get-limit`).then( res => {
+                    if(res.data.status == 200) {
+                        this.$store.commit('setNumOfEntries', res.data.limit);
                     } else {
                         console.warn(res.data.message);
                         this.setLimit();
